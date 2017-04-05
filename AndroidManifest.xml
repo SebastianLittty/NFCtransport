@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dieutek.nfc"
+    android:installLocation="auto"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="18" />
+
+    <!-- for card.io card scanning -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- for most things, including card.io and paypal -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Camera features -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature android:name="android.hardware.nfc" />
+
+    <application
+        android:name="com.pjct.nfc.NFCTransportPro"
+        android:allowBackup="true"
+        android:icon="@drawable/metro"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.pjct.nfc.SplashScreenActivity"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.pjct.nfc.LoginActivity"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name="com.pjct.nfc.SignUpActivity"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name="com.pjct.nfc.TravelPlannerActivity"
+            android:label="@string/title_activity_travel_planner" >
+        </activity>
+        <activity
+            android:name="com.pjct.nfc.BookedActivity"
+            android:alwaysRetainTaskState="true"
+            android:label="@string/title_activity_booked"
+            android:parentActivityName="com.pjct.nfc.TravelPlannerActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dieutek.nfc.TravelPlannerActivity" />
+        </activity>
+        <activity
+            android:name="com.pjct.nfc.BookedDetailsActivity"
+            android:label="@string/title_activity_booked"
+            android:parentActivityName="com.pjct.nfc.BookedActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dieutek.nfc.BookedActivity" />
+        </activity>
+        <activity
+            android:name="com.pjct.nfc.TrainsListActivity"
+            android:label="@string/title_activity_trains_list" >
+        </activity>
+        <activity
+            android:name="com.pjct.nfc.TrainDetailActivity"
+            android:alwaysRetainTaskState="true"
+            android:label="@string/title_activity_train_detail"
+            android:parentActivityName="com.pjct.nfc.TravelPlannerActivity"
+            android:screenOrientation="nosensor" >
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dieutek.nfc.TravelPlannerActivity" />
+        </activity>
+        <activity
+            android:name="com.pjct.nfc.SettingsActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.pjct.nfc.PaymentActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dieutek.nfc.DashBoardActivity" />
+        </activity>
+        <!-- Paypal SDK Service and Activities -->
+        <service
+            android:name="com.paypal.android.sdk.payments.PayPalService"
+            android:exported="false" />
+
+        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+        <activity
+            android:name="io.card.payment.CardIOActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="io.card.payment.DataEntryActivity" />
+    </application>
+
+</manifest>

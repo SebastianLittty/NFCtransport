@@ -1,0 +1,116 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SignUpActivity" >
+
+    <!-- SignUp progress -->
+
+   <LinearLayout
+        android:id="@+id/signup_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/signup_status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/signup_progress_signing_up"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+    <!-- Login form -->
+
+    <ScrollView
+        android:id="@+id/sign_up_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            style="@style/SignUpFormContainer"
+            android:orientation="vertical" 
+            android:background="@drawable/mainpic1">
+
+            <EditText
+                android:id="@+id/fullname"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:hint="@string/prompt_user_fname"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:background="@drawable/rect_text_edit" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:hint="@string/prompt_email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rect_text_edit" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:hint="@string/prompt_password"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rect_text_edit" />
+
+            <EditText
+                android:id="@+id/nfc_tag_id"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:hint="@string/prompt_nfc_id"
+                android:inputType=""
+                android:maxLines="1"
+                android:singleLine="true" 
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rect_text_edit"/>
+
+            <Button
+                android:id="@+id/sign_up_button"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:text="@string/sign_up" 
+                android:background="@drawable/btnstyle"
+                />
+            <!-- Link to Sign In Screen -->
+
+            <TextView
+                android:id="@+id/link_to_signin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dip"
+                android:layout_marginTop="40dip"
+                android:gravity="center"
+                android:text="@string/signin_link"
+                android:textColor="#0b84aa"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</merge>

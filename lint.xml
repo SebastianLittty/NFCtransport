@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="NestedScrolling">
+        <ignore path="res/layout/activity_train_detail.xml" />
+    </issue>
+    <issue id="ScrollViewCount">
+        <ignore path="res/layout/activity_train_detail.xml" />
+    </issue>
+</lint>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NFC Transport</string>
+    <string name="intro_message">This is a simple app to read various tags (NDEF, RFID, FeliCa, ISO 14443, etc).\n\nYou use it by holding a tag/card against the back of your phone/tablet.\n\nPlease let me know if you want me to change how the data is displayed. Also send me an e-mail (adam@anyro.se) if you have any problems with the app and I\'ll let you know when I\'ve fixed it. You can also see the source code and report issues at https://github.com/nadam/nfc-reader.\n\nIf you can\'t read any tag, please try some of the other NFC apps on Google Play and let me know if this app is the only one not working. Thanks!\n\n/Adam</string>
+    <string name="error">Error</string>
+    <string name="error_login">Invalid Email and Password</string>
+    <string name="error_signup">Sign Up failed! Try Again Later</string>
+    <string name="no_nfc">No NFC found on this device</string>
+    <string name="nfc_disabled">NFC is not enabled. Please go to the wireless settings to enable it.</string>
+    <string name="view_booked_history">Booked Tickets</string>
+    <string name="action_settings">Sign Out</string>
+    <string name="title_travelplan">Travel Plan</string>
+    <string name="title_myhome">My Home</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Enter your Email</string>
+    <string name="prompt_password">Enter your Password</string>
+    <string name="action_sign_in_register"><b>Sign in</b> or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_forgot_password">Recover lost password</string>
+    <string name="login_progress_signing_in">Signing in&#8230;</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="signin_link">Already has Account! Sign In Here</string>
+    <!-- Strings related to Sign Up -->
+    <string name="prompt_user_fname">Enter your Full Name</string>
+    <string name="prompt_nfc_id">Your NFC Tag ID</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="full_name">Full Name</string>
+    <string name="signup_progress_signing_up">Signing Up&#8230;</string>
+    <string name="app_exit">Exit</string>
+    <string name="signup_link">New to NFC? Sign Up Here</string>
+    <string name="forgotpwd_link">Forgot your Password?</string>
+    <string name="btnBook">Go</string>
+    <!-- Strings for Settings -->
+    <string name="title_settings">Preferences</string>
+    <string name="settings_title">NFC Transport Settings</string>
+    <string name="server_address">Web server address</string>
+    <string name="server_address_default">http://192.168.1.60:8080</string>
+    <string name="server_msg">Enter the web server address</string>
+    <string name="title_activity_dash_board">DashBoardActivity</string>
+    <string name="title_activity_paypal">Pay for Ticket</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="txtViewSource">Select Source :</string>
+    <string name="txtViewDstn">Select Destination :</string>
+    <string name="action_travel_plan">Book your Seat</string>
+    <string name="txtViewScanTag">Scan your Tag :</string>
+    <string name="spinner_compare">Your Source and Destination are Same</string>
+    <string name="title_activity_travel_planner">Plan Your Travel</string>
+    <string name="title_activity_trains_list">View Trains</string>
+    <string name="title_activity_train_detail">Train Details</string>
+    <string name="title_activity_booked">Booked History</string>
+    <string name="makepayment">Make Payment</string>
+    <string name="hintJourneyDate">Your Journey Date</string>
+	<string name="ticketDetails">Your Ticket Details</string>
+	<string name="alert_cancel_reseve_title">Are you sure?</string>
+	<string name="alert_cancel_reseve_message">Your reservation will be cancelled</string>
+	<string name="alert_text_postive">Ok</string>
+	<string name="alert_text_negative">Cancel</string>
+	<string name="cancelTicket">Cancel Reservation</string>
+	<string name="success_cancel">Reservation Cancelled Successfully</string>
+	<string name="error_cancel">Error while Processing</string>
+</resources>

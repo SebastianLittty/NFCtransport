@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/antRootLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/mainpic1" >
+
+    <EditText
+        android:id="@+id/antEditText"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:hint="@string/prompt_email"
+        android:inputType="textEmailAddress"
+         android:background="@drawable/rect_text_edit" />
+
+</RelativeLayout>
